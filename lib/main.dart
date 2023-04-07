@@ -6,10 +6,20 @@ void main() {
 
 class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Flutterando', 
-    textDirection: TextDirection.rtl,
-    ),
+    return MaterialApp(
+      home: HomePage(),
+      
+    );
+  }
+}
+
+class HomePage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Center(
+        child: Text('Flutterando'),
+      ),
     );
   }
 
