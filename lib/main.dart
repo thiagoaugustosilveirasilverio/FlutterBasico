@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Myapp());
+  runApp(const MyApp());
 }
 
-class Myapp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
       
     );
@@ -14,11 +17,22 @@ class Myapp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget{
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Center(
+    return  Scaffold(
+       appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Center(
         child: Text('Flutterando'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+        print('Clicou');
+      },
       ),
     );
   }
